@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IT professional specializing in System Administration, Server Management, Linux, and Microsoft Office. Explore my portfolio." />
+  <meta name="keywords" content="IT student, system administration, server management, Linux, portfolio" />
+  <meta property="og:title" content="NP — IT Portfolio" />
+  <meta property="og:description" content="IT professional specializing in System Administration, Server Management & Linux." />
+  <meta property="og:type" content="website" />
+  <title>NP — IT Portfolio | Home</title>
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+</head>
+<body>
+
+  <!-- NAVBAR (injected by components.js) -->
+  <div id="navbar" role="banner"></div>
+
+  <div class="page-wrapper">
+
+    <!-- ══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <!-- Text side -->
+          <div class="hero-text">
+            <span class="hero-eyebrow">Available for hire</span>
+
+            <h1 class="hero-title">
+              Bridging Systems &amp;<br>
+              <span class="highlight">Infrastructure</span> with
+              <span class="highlight-red">Purpose</span>
+            </h1>
+
+            <p class="hero-desc">
+              IT student with hands-on expertise in Linux server administration,
+              network infrastructure, and enterprise productivity tools.
+              I keep systems running, secure, and optimised.
+            </p>
+
+            <div class="hero-actions">
+              <a href="/projects.html" class="btn btn-primary">View My Work</a>
+              <a href="/contact.html"  class="btn btn-secondary">Get in Touch</a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <div class="hero-stat-num">4+</div>
+                <div class="hero-stat-label">Core Skills</div>
+              </div>
+              <div>
+                <div class="hero-stat-num">Linux</div>
+                <div class="hero-stat-label">Primary OS</div>
+              </div>
+              <div>
+                <div class="hero-stat-num">24/7</div>
+                <div class="hero-stat-label">Server Ready</div>
+              </div>
+            </div>
+
+            <div class="skills-cloud" style="margin-top:var(--space-8)">
+              <span class="badge badge-blue">System Admin</span>
+              <span class="badge badge-blue">Server Mgmt</span>
+              <span class="badge badge-red">Linux</span>
+              <span class="badge badge-gray">MS Office Suite</span>
+              <span class="badge badge-gray">Networking</span>
+              <span class="badge badge-gray">Bash / Shell</span>
+            </div>
+          </div>
+
+          <!-- Visual side -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-card-stack">
+              <div class="terminal-card card-back"></div>
+              <div class="terminal-card">
+                <div class="terminal-header">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                  <span style="color:#475569;margin-left:auto;font-size:.7rem">bash — ~</span>
+                </div>
+                <div class="terminal-body">
+                  <div class="line"><span class="prompt">njr@server</span><span class="cmd">:~$</span> uname -a</div>
+                  <div class="line"><span class="out">Linux srv 6.1.0 #1 SMP x86_64 GNU/Linux</span></div>
+                  <div class="line"><span class="prompt">njr@server</span><span class="cmd">:~$</span> systemctl status nginx</div>
+                  <div class="line"><span class="out">● nginx.service — active (running)</span></div>
+                  <div class="line"><span class="prompt">njr@server</span><span class="cmd">:~$</span> df -h /</div>
+                  <div class="line"><span class="out">Filesystem  Size  Used Avail Use%</span></div>
+                  <div class="line"><span class="out">/dev/sda1    40G   12G   26G  32%</span></div>
+                  <div class="line"><span class="prompt">njr@server</span><span class="cmd">:~$</span> <span class="cursor"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+
+        <div class="about-grid">
+
+          <!-- Illustration -->
+          <div class="about-img-wrapper reveal">
+            <div class="about-img-bg" aria-hidden="true">🖥️</div>
+            <div class="info-chip chip-tl">🐧 Linux First</div>
+            <div class="info-chip chip-br">⚙️ SysAdmin</div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-copy reveal">
+            <span class="section-label">About Me</span>
+            <h2 id="about-heading" class="section-title">Keeping Servers Alive Since Day One</h2>
+            <p style="margin-bottom:var(--space-5)">
+              I'm an IT student with a deep passion for the infrastructure that powers the modern digital world.
+              From spinning up Linux servers to managing enterprise environments, I thrive at the intersection
+              of reliability, performance, and security.
+            </p>
+            <p>
+              Whether it's hardening a Debian server, automating repetitive tasks with Bash, or setting up
+              a productivity workflow for an entire organisation using the Microsoft Office suite —
+              I approach every challenge with rigour and attention to detail.
+            </p>
+
+            <ul class="about-list" style="margin-top:var(--space-6)">
+              <li>
+                <span class="icon" aria-hidden="true">🖥</span>
+                <span><strong>System Administration</strong> — User management, permissions, backups, and patch cycles.</span>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true">🌐</span>
+                <span><strong>Server Management</strong> — Apache, Nginx, SSH hardening, and performance tuning.</span>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true">🐧</span>
+                <span><strong>Linux</strong> — Ubuntu, Debian, CentOS; CLI-first, scripting, and troubleshooting.</span>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true">📄</span>
+                <span><strong>Microsoft Office</strong> — Advanced Excel, Word, PowerPoint, and Outlook workflows.</span>
+              </li>
+            </ul>
+
+            <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-8)">
+              <a href="/skills.html"   class="btn btn-primary">Explore Skills</a>
+              <a href="/contact.html"  class="btn btn-secondary">Contact Me</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         QUICK SKILLS TEASER
+    ═══════════════════════════════════════════ -->
+    <section class="section-sm" style="background:var(--clr-gray-7)" aria-label="Skills overview">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:var(--space-10)">
+          <span class="section-label">Expertise</span>
+          <h2>What I Bring to the Table</h2>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--space-6)">
+
+          <div class="card reveal" style="text-align:center">
+            <div style="font-size:2.5rem;margin-bottom:var(--space-4)" aria-hidden="true">🖥️</div>
+            <h3 style="margin-bottom:var(--space-2)">System Administration</h3>
+            <p style="font-size:.9rem">User management, group policies, cron jobs, and full server lifecycle management.</p>
+          </div>
+
+          <div class="card reveal" style="text-align:center">
+            <div style="font-size:2.5rem;margin-bottom:var(--space-4)" aria-hidden="true">🌐</div>
+            <h3 style="margin-bottom:var(--space-2)">Server Management</h3>
+            <p style="font-size:.9rem">Web server config with Nginx/Apache, DNS, firewalls, TLS/SSL, and uptime monitoring.</p>
+          </div>
+
+          <div class="card reveal" style="text-align:center">
+            <div style="font-size:2.5rem;margin-bottom:var(--space-4)" aria-hidden="true">🐧</div>
+            <h3 style="margin-bottom:var(--space-2)">Linux</h3>
+            <p style="font-size:.9rem">Debian / Ubuntu / CentOS; advanced terminal usage, shell scripting, and system tuning.</p>
+          </div>
+
+          <div class="card reveal" style="text-align:center">
+            <div style="font-size:2.5rem;margin-bottom:var(--space-4)" aria-hidden="true">📊</div>
+            <h3 style="margin-bottom:var(--space-2)">Microsoft Office</h3>
+            <p style="font-size:.9rem">Excel formulas & macros, Word templates, dynamic PowerPoint decks, and Outlook flows.</p>
+          </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:var(--space-10)">
+          <a href="/skills.html" class="btn btn-primary">View All Skills →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CTA BANNER
+    ═══════════════════════════════════════════ -->
+    <section class="section-sm" aria-label="Call to action">
+      <div class="container" style="text-align:center">
+        <span class="section-label">Let's Connect</span>
+        <h2 style="margin-bottom:var(--space-4)">Ready to Work Together?</h2>
+        <p class="section-desc" style="margin:0 auto var(--space-8)">
+          Whether you need an IT intern, a freelance sysadmin, or just someone to fix that broken RAID array —
+          I'm ready to help.
+        </p>
+        <a href="/contact.html" class="btn btn-red">Get in Touch</a>
+      </div>
+    </section>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- FOOTER (injected by components.js) -->
+  <footer id="footer" role="contentinfo"></footer>
+
+  <script src="/js/components.js"></script>
+</body>
+</html>

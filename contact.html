@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with me for IT opportunities, internships, server admin projects, or general questions." />
+  <meta property="og:title" content="NP — Contact" />
+  <meta property="og:type" content="website" />
+  <title>NP — Contact | IT Portfolio</title>
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+</head>
+<body>
+
+  <div id="navbar" role="banner"></div>
+
+  <div class="page-wrapper">
+
+    <!-- PAGE HERO -->
+    <section class="contact-hero" aria-labelledby="contact-heading">
+      <div class="container">
+        <span class="section-label">Get in Touch</span>
+        <h1 id="contact-heading" style="margin-bottom:var(--space-4)">Let's Work Together</h1>
+        <p style="max-width:500px;margin:0 auto;color:var(--clr-gray-3)">
+          Whether you have a server that needs attention or a career opportunity —
+          I'd love to hear from you.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" aria-label="Contact form and info">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Info side -->
+          <div class="reveal">
+            <span class="section-label">Reach Out</span>
+            <h2 style="margin-bottom:var(--space-4)">Contact Information</h2>
+            <p style="color:var(--clr-gray-3);margin-bottom:var(--space-8)">
+              Prefer email? Drop me a message directly. I typically respond within 24 hours.
+            </p>
+
+            <div class="contact-info-list">
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">📧</div>
+                <div>
+                  <div class="contact-info-label">Email</div>
+                  <div class="contact-info-value">
+                    <a href="mailto:hello@npportfolio.dev" style="color:var(--clr-blue)">hello@npportfolio.dev</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">📍</div>
+                <div>
+                  <div class="contact-info-label">Location</div>
+                  <div class="contact-info-value">Kathmandu, Nepal</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">⏰</div>
+                <div>
+                  <div class="contact-info-label">Response Time</div>
+                  <div class="contact-info-value">Within 24 hours</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">🟢</div>
+                <div>
+                  <div class="contact-info-label">Status</div>
+                  <div class="contact-info-value" style="color:#16a34a">Available for Opportunities</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- What I'm open to -->
+            <div style="margin-top:var(--space-10)">
+              <h3 style="font-size:1rem;margin-bottom:var(--space-4)">Open To</h3>
+              <div style="display:flex;flex-wrap:wrap;gap:var(--space-2)">
+                <span class="badge badge-blue">IT Internship</span>
+                <span class="badge badge-blue">Freelance SysAdmin</span>
+                <span class="badge badge-red">Linux Project</span>
+                <span class="badge badge-red">Server Setup</span>
+                <span class="badge badge-gray">Data Entry</span>
+                <span class="badge badge-gray">Office Automation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form side -->
+          <div class="reveal">
+            <div class="contact-form">
+              <h2 style="font-size:1.25rem;margin-bottom:var(--space-6)">Send a Message</h2>
+
+              <form id="contactForm" novalidate>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First Name <span style="color:var(--clr-red)" aria-hidden="true">*</span></label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      class="form-input"
+                      placeholder="John"
+                      required
+                      autocomplete="given-name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      class="form-input"
+                      placeholder="Doe"
+                      autocomplete="family-name"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address <span style="color:var(--clr-red)" aria-hidden="true">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="john@example.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject <span style="color:var(--clr-red)" aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input"
+                    placeholder="IT Internship / Server Project / General"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message <span style="color:var(--clr-red)" aria-hidden="true">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-input"
+                    placeholder="Tell me about the opportunity or project..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center">
+                  Send Message →
+                </button>
+
+              </form>
+
+              <!-- Success state -->
+              <div class="form-success" id="formSuccess">
+                <div class="check-icon" aria-hidden="true">✓</div>
+                <h3 style="margin-bottom:var(--space-3)">Message Sent!</h3>
+                <p style="color:var(--clr-gray-3)">
+                  Thanks for reaching out. I'll get back to you within 24 hours.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Row -->
+    <section class="section-sm" style="background:var(--clr-gray-7)" aria-label="FAQ">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:var(--space-10)">
+          <span class="section-label">FAQ</span>
+          <h2>Common Questions</h2>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6);max-width:900px;margin:0 auto">
+
+          <div class="card reveal">
+            <h3 style="font-size:1rem;margin-bottom:var(--space-3)">Are you available for remote work?</h3>
+            <p style="font-size:.9rem">Yes — I'm fully set up for remote system administration and can connect securely to your infrastructure via SSH or VPN.</p>
+          </div>
+
+          <div class="card reveal">
+            <h3 style="font-size:1rem;margin-bottom:var(--space-3)">What OS environments do you support?</h3>
+            <p style="font-size:.9rem">Primarily Linux (Ubuntu, Debian, CentOS) and Windows Server. I can work in hybrid environments as well.</p>
+          </div>
+
+          <div class="card reveal">
+            <h3 style="font-size:1rem;margin-bottom:var(--space-3)">Can you help with Microsoft Office automation?</h3>
+            <p style="font-size:.9rem">Absolutely. I build Excel macros, Word templates, and Outlook automation to streamline office workflows significantly.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer id="footer" role="contentinfo"></footer>
+  <script src="/js/components.js"></script>
+</body>
+</html>

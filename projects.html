@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio projects in System Administration, Linux server setup, and Office automation. Real-world IT work samples." />
+  <meta property="og:title" content="NP — Projects" />
+  <meta property="og:type" content="website" />
+  <title>NP — Projects | IT Portfolio</title>
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+</head>
+<body>
+
+  <div id="navbar" role="banner"></div>
+
+  <div class="page-wrapper">
+
+    <!-- PAGE HERO -->
+    <section class="projects-hero" aria-labelledby="projects-heading">
+      <div class="container">
+        <span class="section-label">Portfolio</span>
+        <h1 id="projects-heading" style="margin-bottom:var(--space-4)">Projects &amp; Work Samples</h1>
+        <p style="max-width:560px;margin:0 auto;color:var(--clr-gray-3)">
+          Real-world scenarios I've tackled — from hardening Linux servers
+          to building automated Office workflows.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTER + GRID -->
+    <section class="section" aria-label="Projects">
+      <div class="container">
+
+        <!-- Filter bar -->
+        <div class="filter-bar" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="linux">Linux</button>
+          <button class="filter-btn" data-filter="server">Server Mgmt</button>
+          <button class="filter-btn" data-filter="sysadmin">SysAdmin</button>
+          <button class="filter-btn" data-filter="office">MS Office</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal" data-category="linux">
+            <div class="project-card-img" aria-hidden="true">🐧</div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">Automated Debian Server Hardening</h2>
+              <p class="project-card-desc">
+                Bash script suite that performs full CIS-Benchmark hardening on a fresh Debian 12 install:
+                disabling unused services, enforcing password policies, configuring UFW, and setting up
+                unattended upgrades.
+              </p>
+              <div class="project-card-tags">
+                <span class="badge badge-blue">Bash</span>
+                <span class="badge badge-blue">Debian</span>
+                <span class="badge badge-blue">UFW</span>
+                <span class="badge badge-gray">Cron</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="#" class="btn btn-primary btn-sm">View Script</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal" data-category="server">
+            <div class="project-card-img red-bg" aria-hidden="true">🌐</div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">Nginx Reverse Proxy Setup</h2>
+              <p class="project-card-desc">
+                Configured a production-ready Nginx reverse proxy with Let's Encrypt TLS termination,
+                HTTP/2, Gzip compression, and rate limiting for three upstream Node.js applications
+                on a single VPS.
+              </p>
+              <div class="project-card-tags">
+                <span class="badge badge-red">Nginx</span>
+                <span class="badge badge-red">TLS/SSL</span>
+                <span class="badge badge-red">Ubuntu</span>
+                <span class="badge badge-gray">Let's Encrypt</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="#" class="btn btn-primary btn-sm">View Config</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal" data-category="sysadmin">
+            <div class="project-card-img gray-bg" aria-hidden="true">👥</div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">Active Directory Lab Environment</h2>
+              <p class="project-card-desc">
+                Built a virtualised AD domain controller lab using VirtualBox with Windows Server 2022 + 
+                Ubuntu clients. Configured Group Policy Objects, folder redirection, and logon scripts
+                for a simulated 50-user organisation.
+              </p>
+              <div class="project-card-tags">
+                <span class="badge badge-gray">Active Directory</span>
+                <span class="badge badge-gray">Group Policy</span>
+                <span class="badge badge-gray">VirtualBox</span>
+                <span class="badge badge-blue">PowerShell</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="#" class="btn btn-primary btn-sm">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal" data-category="linux">
+            <div class="project-card-img" aria-hidden="true">📊</div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">System Health Monitor (Bash)</h2>
+              <p class="project-card-desc">
+                A terminal dashboard script that polls CPU usage, memory, disk I/O, and network stats
+                every 5 seconds. Sends email alerts via <code>sendmail</code> when thresholds are breached.
+              </p>
+              <div class="project-card-tags">
+                <span class="badge badge-blue">Bash</span>
+                <span class="badge badge-blue">cron</span>
+                <span class="badge badge-blue">Linux</span>
+                <span class="badge badge-gray">sendmail</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="#" class="btn btn-primary btn-sm">View Script</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card reveal" data-category="office">
+            <div class="project-card-img gray-bg" aria-hidden="true">📈</div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">HR Analytics Excel Dashboard</h2>
+              <p class="project-card-desc">
+                Interactive Excel dashboard for an HR department using PivotTables, slicers, conditional
+                formatting, and dynamic charts to visualise headcount, attrition, and performance data
+                across 5 departments.
+              </p>
+              <div class="project-card-tags">
+                <span class="badge badge-gray">Excel</span>
+                <span class="badge badge-gray">PivotTables</span>
+                <span class="badge badge-gray">VBA</span>
+                <span class="badge badge-gray">Charts</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="#" class="btn btn-primary btn-sm">View File</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card reveal" data-category="server">
+            <div class="project-card-img red-bg" aria-hidden="true">🔒</div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">SSH Key Management &amp; Bastion Host</h2>
+              <p class="project-card-desc">
+                Deployed a SSH bastion host on Ubuntu with key-based authentication only, fail2ban
+                intrusion prevention, and audit logging. Managed key rotation for 10 developers
+                using a simple bash wrapper.
+              </p>
+              <div class="project-card-tags">
+                <span class="badge badge-red">SSH</span>
+                <span class="badge badge-red">fail2ban</span>
+                <span class="badge badge-red">Ubuntu</span>
+                <span class="badge badge-blue">Bash</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="#" class="btn btn-primary btn-sm">View Details</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /projects-grid -->
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-sm" style="background:var(--clr-gray-7)" aria-label="CTA">
+      <div class="container" style="text-align:center">
+        <h2 style="margin-bottom:var(--space-4)">Have a Project in Mind?</h2>
+        <p style="margin-bottom:var(--space-8);color:var(--clr-gray-3)">
+          I'm open to internships, freelance IT work, and real-world collaborations.
+        </p>
+        <a href="/contact.html" class="btn btn-primary">Let's Talk →</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer id="footer" role="contentinfo"></footer>
+  <script src="/js/components.js"></script>
+</body>
+</html>
