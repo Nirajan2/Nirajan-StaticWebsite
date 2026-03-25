@@ -15,10 +15,10 @@
   /* ── Navbar HTML ─────────────────────────────────────── */
   function navbarHTML() {
     const links = [
-      { href: '/index.html',    label: 'Home'     },
-      { href: '/skills.html',   label: 'Skills'   },
+      { href: '/index.html', label: 'Home' },
+      { href: '/skills.html', label: 'Skills' },
       { href: '/projects.html', label: 'Projects' },
-      { href: '/contact.html',  label: 'Contact'  },
+      { href: '/contact.html', label: 'Contact' },
     ];
 
     const currentPath = window.location.pathname;
@@ -119,17 +119,17 @@
 
   /* ── Inject components ───────────────────────────────── */
   function inject() {
-    const navEl  = document.getElementById('navbar');
+    const navEl = document.getElementById('navbar');
     const footEl = document.getElementById('footer');
-    if (navEl)  navEl.innerHTML  = navbarHTML();
+    if (navEl) navEl.innerHTML = navbarHTML();
     if (footEl) footEl.innerHTML = footerHTML();
   }
 
   /* ── Mobile menu toggle ──────────────────────────────── */
   function initMobileMenu() {
-    const toggle   = document.getElementById('navToggle');
+    const toggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
-    const navCta   = document.getElementById('navCta');
+    const navCta = document.getElementById('navCta');
     if (!toggle) return;
 
     toggle.addEventListener('click', () => {
@@ -200,7 +200,7 @@
   /* ── Filter bar (projects page) ──────────────────────── */
   function initFilterBar() {
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards      = document.querySelectorAll('.project-card[data-category]');
+    const cards = document.querySelectorAll('.project-card[data-category]');
     if (!filterBtns.length) return;
 
     filterBtns.forEach(btn => {
@@ -218,23 +218,104 @@
   }
 
   /* ── Contact form (contact page) ─────────────────────── */
+  // ⬇️  Change this to your deployed backend URL once you host it
+  const BACKEND_URL = 'https://nirajankarki2.com.np/';
+
   function initContactForm() {
-    const form    = document.getElementById('contactForm');
+    const form = document.getElementById('contactForm');
     const success = document.getElementById('formSuccess');
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // Simulate async submission
-      const btn = form.querySelector('[type="submit"]');
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
+    // Remove any old inline error banner if present
+    let errorBanner = document.getElementById('formError');
 
-      setTimeout(() => {
-        form.style.display = 'none';
-        if (success) success.style.display = 'block';
-      }, 1200);
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const btn = form.querySelector('[type="submit"]');
+
+      // Clear previous error
+      if (errorBanner) {
+        errorBanner.remove();
+        errorBanner = null;
+      }
+
+      // Gather form data
+      const data = {
+        firstName: form.firstName.value.trim(),
+        lastName: form.lastName.value.trim(),
+        email: form.email.value.trim(),
+        subject: form.subject.value.trim(),
+        message: form.message.value.trim(),
+      };
+
+      // Client-side required-field check
+      if (!data.firstName || !data.email || !data.subject || !data.message) {
+        showFormError(form, 'Please fill in all required fields.');
+        return;
+      }
+
+      // Loading state
+      btn.disabled = true;
+      btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:.5rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>Sending…</span>';
+
+      // Add spin keyframes once
+      if (!document.getElementById('spinStyle')) {
+        const s = document.createElement('style');
+        s.id = 'spinStyle';
+        s.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
+        document.head.appendChild(s);
+      }
+
+      try {
+        const res = await fetch(`${BACKEND_URL}/api/contact`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        const json = await res.json();
+
+        if (res.ok && json.success) {
+          // ✅ Success — hide form, show success panel
+          form.style.display = 'none';
+          if (success) {
+            success.style.display = 'block';
+          }
+        } else {
+          throw new Error(json.error || 'Something went wrong. Please try again.');
+        }
+      } catch (err) {
+        showFormError(form, err.message);
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message →';
+      }
     });
+  }
+
+  function showFormError(form, message) {
+    let banner = document.getElementById('formError');
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'formError';
+      banner.style.cssText = [
+        'margin-top:var(--space-4,1rem)',
+        'padding:12px 16px',
+        'border-radius:8px',
+        'background:rgba(239,68,68,.12)',
+        'border:1px solid rgba(239,68,68,.4)',
+        'color:#f87171',
+        'font-size:.9rem',
+        'line-height:1.5',
+        'display:flex',
+        'align-items:flex-start',
+        'gap:.6rem',
+      ].join(';');
+      const submitBtn = form.querySelector('[type="submit"]');
+      form.insertBefore(banner, submitBtn);
+    }
+    banner.innerHTML = `<span aria-hidden="true" style="flex-shrink:0">⚠️</span><span>${message}</span>`;
+    banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   /* ── Boot ────────────────────────────────────────────── */
